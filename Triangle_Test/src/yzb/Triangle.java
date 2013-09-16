@@ -51,9 +51,9 @@ public class Triangle
 			}
 			else
 			{
-				if((triangle.A*triangle.A==triangle.B*triangle.B+triangle.C*triangle.C)
-				  ||(triangle.B*triangle.B==triangle.A*triangle.A+triangle.C*triangle.C)
-				  ||(triangle.C*triangle.C==triangle.A*triangle.A+triangle.B*triangle.B))
+				if((Math.abs((triangle.A*triangle.A-(triangle.B*triangle.B+triangle.C*triangle.C)))<0.0001)
+				  ||(Math.abs((triangle.B*triangle.B-(triangle.A*triangle.A+triangle.C*triangle.C)))<0.0001)
+				  ||(Math.abs((triangle.C*triangle.C-(triangle.A*triangle.A+triangle.B*triangle.B)))<0.0001))
 					strType="isosceles, and it is a right triangle as well.";
 				else
 					strType="isosceles, and it is not a right triangle as well.";
@@ -66,7 +66,7 @@ public class Triangle
 	{
 		//BigDecimal a = new BigDecimal(1000);
 		//return a.doubleValue();
-		Triangle tri = new Triangle(3,4,5);
+		Triangle tri = new Triangle(1,Math.sqrt(2),1);
 		//if ( tri.isTriangle(tri) )
 		System.out.println("This is "+tri.isType(tri));
 		//else 

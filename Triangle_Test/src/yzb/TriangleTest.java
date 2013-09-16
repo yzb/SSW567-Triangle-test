@@ -67,7 +67,7 @@ public class TriangleTest extends TestCase {
         assertEquals(expected, actual);
      }
     public void testType05() {
-    	triangle = new Triangle( 1, Math.sqrt(2),  1);
+    	triangle = new Triangle( Math.sqrt(2), Math.sqrt(2)* Math.sqrt(2),  Math.sqrt(2));
         String expected = "isosceles, and it is a right triangle as well.";																
         String result = triangle.isType(triangle);
         String actual = result;
