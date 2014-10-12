@@ -7,7 +7,6 @@
  */
 package yzb;
 import java.lang.Math;
-import java.math.BigDecimal;
 public class Triangle
 {
 	protected double A=0;
@@ -64,13 +63,12 @@ public class Triangle
 	
 	public static void main(String args[])
 	{
-		//BigDecimal a = new BigDecimal(1000);
-		//return a.doubleValue();
+		
 		Triangle tri = new Triangle(1,Math.sqrt(2),1);
-		//if ( tri.isTriangle(tri) )
+		if ( tri.isTriangle(tri) )
 		System.out.println("This is "+tri.isType(tri));
-		//else 
-			//System.out.println("This is not triangle.");	
+		else 
+			System.out.println("This is not triangle.");	
 	}
 
 }
